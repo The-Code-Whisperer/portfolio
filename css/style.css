@@ -393,6 +393,12 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
 }
 
+@media (max-width: 800px) {
+    .portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
 .portfolio__item {
     background: var(--clr-dark);
 }
