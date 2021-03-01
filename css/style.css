@@ -310,7 +310,7 @@ header {
 
 .section__title--services {
     color: var(--clr-accent);
-    position: relative;
+    position: static;
 }
 
 .section__title--services::after {
@@ -330,18 +330,20 @@ header {
 .service {
     max-width: 500px;
     margin: 0 auto;
+    
 }
 
 @media (min-width: 800px) {
     .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
     }
-    .service+.service {
-        margin-left: 2em;
+    .service {
+        margin: 1em;
     }
+
 }
 
 .about-me {
@@ -404,7 +406,7 @@ header {
 }
 
 .portfolio__img {
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+    transition: transform 300ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
     padding: 1rem;
 }
 
@@ -415,7 +417,7 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-    transform: scale(1.10);
+    transform: scale(1.05);
     opacity: 1;
 }
 
