@@ -1,31 +1,28 @@
-
 /* change box size calculation to include borders instead of adding borders after box size width is already determined */
-*, *::before, *::after {
-    box-sizing: border-box; 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
-
     --fw-reg: 300;
     --fw-bold: 900;
-
     --clr-light: #f8f9fa;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
-
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
-    0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
-    :root {
+     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
@@ -33,12 +30,13 @@
     }
 }
 
+
 /* General styles */
 
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
-    margin:  0;
+    margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
@@ -53,12 +51,15 @@ img {
     max-width: 100%;
 }
 
-strong{ font-weight: var(--fw-bold)}
+strong {
+    font-weight: var(--fw-bold)
+}
 
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
 }
+
 
 /* Buttons */
 
@@ -80,9 +81,12 @@ strong{ font-weight: var(--fw-bold)}
     transform: scale(1.1);
 }
 
+
 /* Typography */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1;
     margin: 0;
 }
@@ -90,9 +94,11 @@ h1, h2, h3 {
 h1 {
     font-size: var(--fs-h1);
 }
+
 h2 {
     font-size: var(--fs-h2);
 }
+
 h3 {
     font-size: var(--fs-h3);
 }
@@ -114,18 +120,30 @@ h3 {
     font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro, .section__subtitle--about {
+.section__subtitle--intro,
+.section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+
 /* header */
 
-nav {display: none;}
+nav {
+    display: none;
+}
+
 
 /* Intro Section */
+
 .intro {
     position: relative;
 }
@@ -147,14 +165,12 @@ nav {display: none;}
         grid-template-areas: "img title" "img subtitle";
         grid-template-columns: min-content max-content;
     }
-
     .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
     }
-
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 /1;
@@ -165,6 +181,7 @@ nav {display: none;}
         width: calc(100% + 1.5em);
     }
 }
+
 
 /* Services section */
 
@@ -208,8 +225,7 @@ nav {display: none;}
         margin-left: auto;
         margin-right: auto;
     }
-
-    .service + .service {
+    .service+.service {
         margin-left: 2em;
     }
 }
@@ -227,7 +243,7 @@ nav {display: none;}
     .about-me {
         display: grid;
         grid-template-columns: 1fr 200px;
-        grid-template-areas:"title img" "subtitle img" "text img";
+        grid-template-areas: "title img" "subtitle img" "text img";
         grid-column-gap: 2em;
     }
     .section__title--about {
@@ -247,4 +263,82 @@ nav {display: none;}
         position: relative;
         z-index: 2;
     }
+}
+
+
+/* My Work */
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+}
+
+.portfolio__item {
+    background: var(--clr-accent);
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2px;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;;
+}
+
+.footer__link {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em
 }
