@@ -7,11 +7,16 @@
     <title>Steven Kim Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="img/stevenlogo.png" alt="logo">
+            <img src="img/slogo.png" alt="logo">
         </div>
         <button class="" aria-label="toggle navigaiton">
             <span class="hamburger"></span>
@@ -31,7 +36,7 @@
             Hi, I am <strong>Steven Kim</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
-        <img src="img/photoprof.jpg" width="400px" alt="a picture of Steven">
+        <img src="img/photoprof.jpg" alt="a picture of Steven" class="intro__img">
     </section>
 
     <!-- My services -->
@@ -44,11 +49,12 @@
             </div>
             <div class="service">
                 <h3>Web Apps</h3>
-                <p>From stock portfolio simulation services to full fledged browser games, I have the experience necessary to make your next app on the web.</p>
+                <p>From stock portfolio simulation services to full fledged browser games, I have the experience
+                    necessary to make your next app on the web.</p>
             </div>
             <div class="service">
                 <h3>Mobile Apps</h3>
-                <p>Developing my skills in this area soon!</p>
+                <p>Developing my skills in this area soon! Will be using React Native to create apps for both Android and iOS.</p>
             </div>
         </div>
 
@@ -65,7 +71,7 @@
             <p></p>
         </div>
 
-        <img width="400px" src="img/vanpark.jpg" alt="steven in a vancouver park">
+        <img src="img/vanpark.jpg" alt="steven in a vancouver park">
 
     </section>
     <!-- My Work -->
@@ -74,17 +80,30 @@
         <p class="section__subtitle"></p>
         <div class="portfolio">
             <a href="https://affairsandorder.com" class="portfolio__item">
-                <img src="img/anohome.png" width="400px" alt="Affairs And Order" class="portfolio__img">
+                <img src="img/anohome.png" alt="Affairs And Order" class="portfolio__img">
             </a>
 
             <a href="https://github.com/The-Code-Whisperer/finance" class="portfolio__item">
-                <img src="img/samplestocks.png" width="400px" alt="Stock Simulator" class="portfolio__img">
+                <img src="img/samplestocks.png" alt="Stock Simulator" class="portfolio__img">
             </a>
 
             <a href="https://github.com/The-Code-Whisperer/SnapFood" class="portfolio__item">
-                <img src="img/snapfoodsignup.png" width="400px" alt="SnapFood" class="portfolio__img">
+                <img src="img/snapfoodsignup.png" alt="SnapFood" class="portfolio__img">
             </a>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="mailto:97stevenkim@gmail.com" class="footer-link"></a>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="" class="social-list__link">a</a>
+            <li class="social-list__item"><a href="" class="social-list__link">b</a>
+            <li class="social-list__item"><a href="" class="social-list__link">c</a>
+            <li class="social-list__item"><a href="" class="social-list__link">d</a>
+
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
