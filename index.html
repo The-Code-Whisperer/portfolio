@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Kim Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/stevenlogo.png" alt="logo">
+        </div>
+        <button class="" aria-label="toggle navigaiton">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <strong>Steven Kim</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+        <img src="img/photoprof.jpg" width="400px" alt="a picture of Steven">
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Business + Personal Pages</h3>
+                <p>I can make the website for your business or make you a professional introduction website.</p>
+            </div>
+            <div class="service">
+                <h3>Web Apps</h3>
+                <p>From stock portfolio simulation services to full fledged browser games, I have the experience necessary to make your next app on the web.</p>
+            </div>
+            <div class="service">
+                <h3>Mobile Apps</h3>
+                <p>Developing my skills in this area soon!</p>
+            </div>
+        </div>
+
+        <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subittle--about"></p>
+
+        <div class="about-me__body">
+            <p></p>
+            <p></p>
+        </div>
+
+        <img width="400px" src="img/vanpark.jpg" alt="steven in a vancouver park">
+
+    </section>
+    <!-- My Work -->
+    <section id=="work" class="my-work">
+        <h2 class="section__title">My work</h2>
+        <p class="section__subtitle"></p>
+        <div class="portfolio">
+            <a href="https://affairsandorder.com" class="portfolio__item">
+                <img src="img/anohome.png" width="400px" alt="Affairs And Order" class="portfolio__img">
+            </a>
+
+            <a href="https://github.com/The-Code-Whisperer/finance" class="portfolio__item">
+                <img src="img/samplestocks.png" width="400px" alt="Stock Simulator" class="portfolio__img">
+            </a>
+
+            <a href="https://github.com/The-Code-Whisperer/SnapFood" class="portfolio__item">
+                <img src="img/snapfoodsignup.png" width="400px" alt="SnapFood" class="portfolio__img">
+            </a>
+        </div>
+    </section>
+</body>
+</html>
